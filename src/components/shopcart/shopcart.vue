@@ -52,8 +52,9 @@
       totalPrice() {
         let price = 0;
         this.selectFoods.forEach((food) => {
-          price += food.price
+          price += food.price * food.count
         })
+        console.log('price:' + price)
         return price;
       },
       payDes() {
@@ -145,7 +146,7 @@
           font-size: 16px
           font-weight: 700
           &.hightlight
-            color:#fff
+            color: #fff
         &.highlight
           color: #fff
       .content-right
